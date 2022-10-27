@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerAction : MonoBehaviour
 {
     public float speed = 2.0f;
-    public QuestManager questManager;
     public GameManger manager;
     Rigidbody2D rigid;
     Animator anim;
@@ -105,9 +104,11 @@ public class PlayerAction : MonoBehaviour
             scanObject = null;
         }
     }
-
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("게임클리어");
+        if(manager.Clear>=18)
+        {
+            Debug.Log("게임 클리어");
+        }
     }
 }

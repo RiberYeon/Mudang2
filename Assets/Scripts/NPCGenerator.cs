@@ -15,24 +15,24 @@ public class NPCGenerator : MonoBehaviour
     public GameObject NPC9Prefab;
 
 
-    float span1 = 140.0f;
-    float span2 = 140.0f;
-    float span3 = 140.0f;
-    float span4 = 140.0f;
-    float span5 = 140.0f;
-    float span6 = 140.0f;
-    float span7 = 140.0f;
-    float span8 = 140.0f;
-    float span9 = 140.0f;
+    float span1 = 180.0f;
+    float span2 = 180.0f;
+    float span3 = 180.0f;
+    float span4 = 180.0f;
+    float span5 = 180.0f;
+    float span6 = 180.0f;
+    float span7 = 180.0f;
+    float span8 = 180.0f;
+    float span9 = 180.0f;
 
-    float delta1 = 140.0f;
-    float delta2 = 135.0f;
-    float delta3 = 125.0f;
-    float delta4 = 115.0f;
-    float delta5 = 105.0f;
-    float delta6 = 100.0f;
-    float delta7 = 90.0f;
-    float delta8 = 80.0f;
+    float delta1 = 180.0f;
+    float delta2 = 175.0f;
+    float delta3 = 160.0f;
+    float delta4 = 145.0f;
+    float delta5 = 135.0f;
+    float delta6 = 120.0f;
+    float delta7 = 100.0f;
+    float delta8 = 85.0f;
     float delta9 = 70.0f;
 
     void Start()

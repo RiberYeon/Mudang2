@@ -12,6 +12,7 @@ public class GameManger : MonoBehaviour
     public GameObject scanObject;
     public bool isAction;
     public int talkIndex;
+    public int Clear;
     
     public void Action(GameObject scanObj)
     {
@@ -34,10 +35,16 @@ public class GameManger : MonoBehaviour
             isAction = false;
             talkIndex = 0;
             Debug.Log(questManager.CheckQuest(id));
+            Clear++;
+   
+            // Debug.Log(Clear);
+
+            
             return;
         }
+        
 
-        if(isNpc)
+        if (isNpc)
         {
             talkText.text = talkData;
         }
@@ -48,6 +55,7 @@ public class GameManger : MonoBehaviour
 
         isAction = true;
         talkIndex++;
+        
     }
 
 }
