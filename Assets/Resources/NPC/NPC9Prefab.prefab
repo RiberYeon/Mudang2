@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2529309934732721422}
   - component: {fileID: 3339384057781987941}
   - component: {fileID: -3985058716120119054}
+  - component: {fileID: -9120513861325389681}
   m_Layer: 8
   m_Name: NPC9Prefab
   m_TagString: Untagged
@@ -111,3 +112,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.6}
   m_EdgeRadius: 0
+--- !u!114 &-9120513861325389681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3508473330558443572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90c73eb885005ac4aae958460137dba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 9000
+  isNpc: 1

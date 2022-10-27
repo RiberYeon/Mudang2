@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerAction : MonoBehaviour
 {
     public float speed = 2.0f;
+    public QuestManager questManager;
     public GameManger manager;
     Rigidbody2D rigid;
     Animator anim;
@@ -103,5 +104,10 @@ public class PlayerAction : MonoBehaviour
         {
             scanObject = null;
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("게임클리어");
     }
 }

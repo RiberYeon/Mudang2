@@ -15,25 +15,25 @@ public class NPCGenerator : MonoBehaviour
     public GameObject NPC9Prefab;
 
 
-    float span1 = 30.0f;
-    float span2 = 30.0f;
-    float span3 = 30.0f;
-    float span4 = 40.0f;
-    float span5 = 30.0f;
-    float span6 = 45.0f;
-    float span7 = 30.0f;
-    float span8 = 40.0f;
-    float span9 = 60.0f;
+    float span1 = 140.0f;
+    float span2 = 140.0f;
+    float span3 = 140.0f;
+    float span4 = 140.0f;
+    float span5 = 140.0f;
+    float span6 = 140.0f;
+    float span7 = 140.0f;
+    float span8 = 140.0f;
+    float span9 = 140.0f;
 
-    float delta1 = 25.0f;
-    float delta2 = 20.0f;
-    float delta3 = 20.0f;
-    float delta4 = 15.0f;
-    float delta5 = 20.0f;
-    float delta6 = 10.0f;
-    float delta7 = 5.0f;
-    float delta8 = 10.0f;
-    float delta9 = 0.0f;
+    float delta1 = 140.0f;
+    float delta2 = 135.0f;
+    float delta3 = 125.0f;
+    float delta4 = 115.0f;
+    float delta5 = 105.0f;
+    float delta6 = 100.0f;
+    float delta7 = 90.0f;
+    float delta8 = 80.0f;
+    float delta9 = 70.0f;
 
     void Start()
     {
@@ -65,7 +65,7 @@ public class NPCGenerator : MonoBehaviour
         {
             this.delta3 = 0;
             GameObject npc = Instantiate(NPC3Prefab);
-            int py3 = Random.Range(0, 9);
+            int py3 = Random.Range(5, 9);
             npc.transform.position = new Vector3(26.3f, py3, 0);
         }
 
@@ -110,7 +110,7 @@ public class NPCGenerator : MonoBehaviour
         {
             this.delta8 = 0;
             GameObject npc = Instantiate(NPC8Prefab);
-            int px8 = Random.Range(-36, -26);
+            int px8 = Random.Range(-39, -33);
             npc.transform.position = new Vector3(px8, 36.7f, 0);
         }
 

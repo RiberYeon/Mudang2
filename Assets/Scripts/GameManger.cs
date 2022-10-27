@@ -5,35 +5,49 @@ using UnityEngine.UI;
 
 public class GameManger : MonoBehaviour
 {
+    public TalkManager talkManager;
+    public QuestManager questManager;
     public GameObject talkPanel;
     public Text talkText;
     public GameObject scanObject;
     public bool isAction;
+    public int talkIndex;
     
     public void Action(GameObject scanObj)
     {
-        int ran = Random.Range(0, 100);
-        if (isAction)
+        scanObject = scanObj;
+        ObjData objData = scanObject.GetComponent<ObjData>();
+        Talk(objData.id, objData.isNpc);
+
+        talkPanel.SetActive(isAction);
+    }
+
+    void Talk(int id, bool isNpc)
+    {
+        // Talk Data 시작
+        int questTalkIndex = questManager.GetQuestTalkIndex(id);
+        string talkData = talkManager.GetTalk(id+ questTalkIndex, talkIndex);
+
+        // 대화 끝
+        if(talkData == null)
         {
             isAction = false;
+            talkIndex = 0;
+            Debug.Log(questManager.CheckQuest(id));
+            return;
+        }
+
+        if(isNpc)
+        {
+            talkText.text = talkData;
         }
         else
         {
-            isAction = true;
-            scanObject = scanObj;
-            if(ran % 3 == 0)
-            {
-                talkText.text = "가천관으로 가주세요";
-            }
-            else if (ran % 3 == 1)
-            {
-                talkText.text = "Ai관으로 가주세요";
-            }
-            else if (ran % 3 == 2)
-            {
-                talkText.text = "법학관으로 가주세요";
-            }
+            talkText.text = talkData;
         }
-        talkPanel.SetActive(isAction);
+
+        isAction = true;
+        talkIndex++;
     }
+
 }

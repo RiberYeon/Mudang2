@@ -7,7 +7,7 @@ public class GameDirector : MonoBehaviour
 {
 
     public GameObject timeGuage;
-    float maxTime = 120.0f;
+    float maxTime = 180.0f;
     float timeLeft;
 
     void Start()
