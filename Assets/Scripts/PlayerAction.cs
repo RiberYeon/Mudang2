@@ -106,7 +106,7 @@ public class PlayerAction : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(manager.Clear>=18)
+        if(manager.Clear>=2)
         {
             Debug.Log("게임 클리어");
         }
