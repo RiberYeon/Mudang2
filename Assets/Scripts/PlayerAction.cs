@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerAction : MonoBehaviour
 {
@@ -109,6 +110,7 @@ public class PlayerAction : MonoBehaviour
         if(manager.Clear>=2)
         {
             Debug.Log("게임 클리어");
+            SceneManager.LoadScene("ClearScene");
         }
     }
 }

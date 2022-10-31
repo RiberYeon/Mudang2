@@ -10,9 +10,25 @@ public class GameManger : MonoBehaviour
     public GameObject talkPanel;
     public Text talkText;
     public GameObject scanObject;
+    public GameObject Map;
     public bool isAction;
     public int talkIndex;
     public int Clear;
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            if(Map.activeSelf)
+            {
+                Map.SetActive(false);
+            }
+            else
+            {
+                Map.SetActive(true);
+            }   
+        }
+    }
     
     public void Action(GameObject scanObj)
     {
